@@ -2,9 +2,9 @@
 
 # ==============================================================================
 # Project:     Clockwork OrangeHRM CLI
-# Description: Interactive CLI tool to extract work hours from OrangeHRM MariaDB.
+# Description: Extract work hours from Self-Hosted OrangeHRM (MariaDB).
 # Author:      Ilia Shakeri
-# License:     MIT
+# License:     CC0 1.0 Universal (Public Domain)
 # ==============================================================================
 
 # --- Colors & Styling ---

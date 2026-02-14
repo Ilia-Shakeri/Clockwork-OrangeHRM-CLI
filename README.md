@@ -1,24 +1,48 @@
-# Clockwork OrangeHRM CLI ⚙️🍊
+<div align="center">
 
-![Bash](https://img.shields.io/badge/Language-Bash-4EAA25?style=flat&logo=gnu-bash)
-![Docker](https://img.shields.io/badge/Integration-Docker-2496ED?style=flat&logo=docker)
-![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+  <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Orangehrm_logo.png" alt="OrangeHRM Logo" width="250">
 
-**Clockwork OrangeHRM** is a powerful, interactive CLI utility designed for DevOps engineers and System Administrators managing self-hosted OrangeHRM instances.
+  <h1>Clockwork OrangeHRM CLI ⚙️🍊</h1>
+  
+  <p>
+    <b>The missing CLI tool for Self-Hosted OrangeHRM instances.</b>
+  </p>
 
-It bypasses UI limitations by directly querying the MariaDB backend via Docker, giving you instant access to work-hour calculations and attendance logs.
+  <p>
+    <a href="https://github.com/Ilia-Shakeri/Clockwork-OrangeHRM-CLI/blob/main/LICENSE">
+      <img src="https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg?style=flat-square" alt="License">
+    </a>
+    <img src="https://img.shields.io/badge/Language-Bash-4EAA25?style=flat-square&logo=gnu-bash" alt="Bash">
+    <img src="https://img.shields.io/badge/Database-MariaDB-003545?style=flat-square&logo=mariadb" alt="MariaDB">
+    <img src="https://img.shields.io/badge/Docker-Ready-2496ED?style=flat-square&logo=docker" alt="Docker">
+  </p>
+  
+  <br>
+</div>
 
-> _"A tool for those who prefer the terminal over the mouse."_
+**Clockwork OrangeHRM** is a robust, interactive CLI utility designed specifically for **Self-Hosted** OrangeHRM instances running on **MariaDB**.
+
+It bypasses UI limitations by directly querying the database backend, giving DevOps engineers and System Admins instant access to work-hour calculations and attendance logs.
+
+> _"No web interface needed. Just pure data extraction."_
+
+---
 
 ## 🚀 Features
 
-- **Interactive Experience:** Clean, color-coded prompts for username and date selection.
-- **Smart Defaults:** Automatically calculates hours for the current month if no date is provided.
-- **Secure Authentication:** Supports `.env` configuration to keep database credentials safe.
-- **Dual Modes:** Get a quick summary total or a detailed daily breakdown table.
-- **Zero Dependencies:** Requires only `docker` and `bash`.
+- **Self-Hosted Focus:** Optimized for local or VPS-hosted OrangeHRM containers.
+- **Direct MariaDB Access:** Extracts data straight from the source of truth.
+- **Interactive Mode:** Clean prompts for username, date ranges, and report types.
+- **Smart Defaults:** Auto-calculates current month's hours.
+- **Secure:** Supports `.env` file configuration.
 
-## 🛠️ Installation
+## 🛠️ Prerequisites
+
+- A **Self-Hosted** OrangeHRM instance.
+- **MariaDB** as the database backend (MySQL is likely compatible but untested).
+- Docker installed on the host machine.
+
+## 📥 Installation
 
 1. **Clone the repository:**
    ```bash
@@ -30,43 +54,12 @@ It bypasses UI limitations by directly querying the MariaDB backend via Docker, 
 Bash
 chmod +x clockwork.sh
 (Optional) Configure Environment:
-To skip the password prompt, copy the example config and edit it:
 
 Bash
 cp .env.example .env
 nano .env
-Add your DB password and container name in .env.
-
 💻 Usage
-Run the script and follow the on-screen prompts:
-
 Bash
 ./clockwork.sh
-Example Output
-Plaintext
-
----
-
-/ **_| | _** **\_| | \_\_\_** **\_ **| | **
-| | | |/ \_ \ / **| |/ /\ \ /\ / / _ \/ _` |
-| |**_| | (_) | (**| < \ V V / (\_) \_\_ |
-\_**_|_|\_**/ \_**|\_|\_\ \_/\_/ \_**/|\_\_\_/
-ORANGEHRM CLI EDITION v1.0.0
-
-[+] Configuration loaded from .env
-
-[?] Target Username
-Enter username (Default: ilia):
-
-[?] Date Selection 1) Current Month (Default) 2) Custom Range
-Select option [1]:
-
-[*] Connecting to container 'orangehrm_mariadb'...
-[+] User verified! Employee ID: 12
-
----
-
-# TOTAL WORK HOURS (2026-02-01 to 2026-02-14): 85.50
-
-🤝 Contributing
-Contributions are welcome! Please feel free to submit a Pull Request.
+📄 License
+This project is dedicated to the public domain under the CC0 1.0 Universal license. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.
