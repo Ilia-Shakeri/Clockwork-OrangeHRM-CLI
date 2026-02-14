@@ -79,7 +79,6 @@ Run the script and follow the on-screen prompts:
   | |   | |/ _ \ / __| |/ /\ \ /\ / / _ \/ _` |
   | |___| | (_) | (__|   <  \ V  V / (_) \__  |
     \____|_|\___/ \___|_|\_\  \_/\_/ \___/|___/
-        ORANGEHRM CLI EDITION  v1.0.0
 
   :: Time Tracking Extraction Tool ::
 
@@ -103,4 +102,3 @@ Run the script and follow the on-screen prompts:
 ## 📄 License
 
 This project is dedicated to the public domain under the CC0 1.0 Universal license. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.
-```
