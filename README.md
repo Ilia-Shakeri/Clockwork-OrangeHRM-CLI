@@ -47,7 +47,7 @@ It bypasses UI limitations by directly querying the database backend, giving Dev
 1. **Clone the repository:**
 
    ```bash
-   git clone [https://github.com/Ilia-Shakeri/Clockwork-OrangeHRM-CLI.git](https://github.com/Ilia-Shakeri/Clockwork-OrangeHRM-CLI.git)
+   git clone https://github.com/Ilia-Shakeri/Clockwork-OrangeHRM-CLI.git
    cd clockwork-orangehrm-cli
    ```
 
