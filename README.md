@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Orangehrm_logo.png" alt="OrangeHRM Logo" width="250">
+  <img src="https://avatars.githubusercontent.com/u/1083804?s=200&v=4" alt="OrangeHRM Logo" width="180">
 
   <h1>Clockwork OrangeHRM CLI ⚙️🍊</h1>
   
@@ -9,7 +9,7 @@
   </p>
 
   <p>
-    <a href="https://github.com/Ilia-Shakeri/Clockwork-OrangeHRM-CLI/blob/main/LICENSE">
+    <a href="LICENSE">
       <img src="https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg?style=flat-square" alt="License">
     </a>
     <img src="https://img.shields.io/badge/Language-Bash-4EAA25?style=flat-square&logo=gnu-bash" alt="Bash">
@@ -48,18 +48,29 @@ It bypasses UI limitations by directly querying the database backend, giving Dev
    ```bash
    git clone [https://github.com/YOUR_USERNAME/clockwork-orangehrm-cli.git](https://github.com/YOUR_USERNAME/clockwork-orangehrm-cli.git)
    cd clockwork-orangehrm-cli
-   Make the script executable:
    ```
 
-Bash
+````
+2. **Make the script executable:**
+```bash
 chmod +x clockwork.sh
-(Optional) Configure Environment:
+````
 
-Bash
+3. (Optional) Configure Environment:
+
+```bash
 cp .env.example .env
 nano .env
-💻 Usage
-Bash
+```
+
+## 💻 Usage
+
+Run the script and follow the on-screen prompts:
+
+```bash
 ./clockwork.sh
-📄 License
+```
+
+## 📄 License
+
 This project is dedicated to the public domain under the CC0 1.0 Universal license. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.
