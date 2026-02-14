@@ -45,32 +45,62 @@ It bypasses UI limitations by directly querying the database backend, giving Dev
 ## 📥 Installation
 
 1. **Clone the repository:**
+
    ```bash
-   git clone [https://github.com/YOUR_USERNAME/clockwork-orangehrm-cli.git](https://github.com/YOUR_USERNAME/clockwork-orangehrm-cli.git)
+   git clone [https://github.com/Ilia-Shakeri/Clockwork-OrangeHRM-CLI.git](https://github.com/Ilia-Shakeri/Clockwork-OrangeHRM-CLI.git)
    cd clockwork-orangehrm-cli
    ```
 
-````
 2. **Make the script executable:**
-```bash
-chmod +x clockwork.sh
-````
+
+   ```bash
+   chmod +x clockwork.sh
+   ```
 
 3. (Optional) Configure Environment:
 
-```bash
-cp .env.example .env
-nano .env
-```
+   ```bash
+   cp .env.example .env
+   nano .env
+   ```
 
 ## 💻 Usage
 
 Run the script and follow the on-screen prompts:
+    ```bash
+    ./clockwork.sh
+    ```
 
-```bash
-./clockwork.sh
-```
+## 🖼️ Example Output
+
+  ```text
+    ____ _            _                     _
+    / ___| | ___   ___| | _____      ___  __| | __
+  | |   | |/ _ \ / __| |/ /\ \ /\ / / _ \/ _` |
+  | |___| | (_) | (__|   <  \ V  V / (_) \__  |
+    \____|_|\___/ \___|_|\_\  \_/\_/ \___/|___/
+        ORANGEHRM CLI EDITION  v1.0.0
+
+  :: Time Tracking Extraction Tool ::
+
+  [+] Configuration loaded from .env
+
+  [?] Target Username
+      Enter username (Default: ilia):
+
+  [?] Date Selection
+      1) Current Month (Default)
+      2) Custom Range
+      Select option [1]: 1
+
+  [*] Connecting to container 'orangehrm_mariadb'...
+  [+] User verified! Employee ID: 12
+  --------------------------------------------------------
+  TOTAL WORK HOURS (2026-02-01 to 2026-02-14): 85.50
+  ========================================================
+  ```
 
 ## 📄 License
 
 This project is dedicated to the public domain under the CC0 1.0 Universal license. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.
+```
