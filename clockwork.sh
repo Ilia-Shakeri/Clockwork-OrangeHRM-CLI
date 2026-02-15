@@ -74,8 +74,15 @@ if [ "$DATE_OPT" -eq 1 ]; then
     END_DATE=$(date +%Y-%m-%d)
     echo -e "    ${BLUE}Selected Range: $START_DATE to $END_DATE${NC}"
 else
-    read -p "    Enter Start Date (YYYY-MM-DD): " START_DATE
-    read -p "    Enter End Date   (YYYY-MM-DD): " END_DATE
+    # Start Date: Mandatory (Loop until input is given)
+    while [[ -z "$START_DATE" ]]; do
+        read -p "    Enter Start Date (YYYY-MM-DD): " START_DATE
+    done
+
+    # End Date: Optional (Default to Today)
+    TODAY=$(date +%Y-%m-%d)
+    read -p "    Enter End Date   (YYYY-MM-DD) [Default: $TODAY]: " INPUT_END_DATE
+    END_DATE=${INPUT_END_DATE:-$TODAY}
 fi
 
 # 2.3 Get Report Type
