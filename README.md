@@ -30,10 +30,11 @@ It bypasses UI limitations by directly querying the database backend, giving Dev
 
 ## 🚀 Features
 
-- **Self-Hosted Focus:** Optimized for local or VPS-hosted OrangeHRM containers.
+- **Multi-User Support:** Query single or multiple users (comma-separated) in one batch.
+- **Data Export:** Save reports instantly as **JSON** or **CSV** files.
+- **Auto-Logging:** Automatically saves session logs to the `./logs` directory.
+- **Interactive Session:** Run multiple queries without restarting the script.
 - **Direct MariaDB Access:** Extracts data straight from the source of truth.
-- **Interactive Mode:** Clean prompts for username, date ranges, and report types.
-- **Smart Defaults:** Auto-calculates current month's hours.
 - **Secure:** Supports `.env` file configuration.
 
 ## 🛠️ Prerequisites
@@ -67,39 +68,55 @@ It bypasses UI limitations by directly querying the database backend, giving Dev
 ## 💻 Usage
 
 Run the script and follow the on-screen prompts:
-    ```bash
+`bash
     ./clockwork.sh
-    ```
+    `
 
 ## 🖼️ Example Output
 
-  ```text
- ██████╗██╗      ██████╗  ██████╗██╗  ██╗██╗    ██╗ ██████╗ ██████╗ ██╗  ██╗
-██╔════╝██║     ██╔═══██╗██╔════╝██║ ██╔╝██║    ██║██╔═══██╗██╔══██╗██║ ██╔╝
-██║     ██║     ██║   ██║██║     █████╔╝ ██║ █╗ ██║██║   ██║██████╔╝█████╔╝ 
-██║     ██║     ██║   ██║██║     ██╔═██╗ ██║███╗██║██║   ██║██╔══██╗██╔═██╗ 
+```text
+ ██████╗██╗      ██████╗ ██████╗██╗  ██╗██╗     ██╗ ██████╗ ██████╗ ██╗  ██╗
+██╔════╝██║     ██╔═══██╗██╔════╝██║ ██╔╝██║     ██║██╔═══██╗██╔══██╗██║ ██╔╝
+██║     ██║     ██║   ██║██║     █████╔╝ ██║ █╗ ██║██║   ██║██████╔╝█████╔╝
+██║     ██║     ██║   ██║██║     ██╔═██╗ ██║███╗██║██║   ██║██╔══██╗██╔═██╗
 ╚██████╗███████╗╚██████╔╝╚██████╗██║  ██╗╚███╔███╔╝╚██████╔╝██║  ██║██║  ██╗
  ╚═════╝╚══════╝ ╚═════╝  ╚═════╝╚═╝  ╚═╝ ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
-                                                                            
-  :: Time Tracking Extraction Tool ::
+             ORANGEHRM CLI EDITION  v2.0.0
 
-  [+] Configuration loaded from .env
+ :: Session Started at Sat Feb 15 11:00:00 UTC 2026 ::
 
-  [?] Target Username
-      Enter username (Default: ilia):
+ [+] Configuration loaded from .env
 
-  [?] Date Selection
-      1) Current Month (Default)
-      2) Custom Range
-      Select option [1]: 1
+ [?] Target Username(s)
+     Tip: Separate multiple users with comma (e.g. ilia,admin)
+     Enter username(s) (Default: root): ilia, admin
 
-  [*] Connecting to container 'orangehrm_mariadb'...
-  [+] User verified! Employee ID: 12
-  --------------------------------------------------------
-  TOTAL WORK HOURS (2026-02-01 to 2026-02-14): 85.50
-  ========================================================
-  ```
+ [?] Date Selection
+     1) Current Month (Default)
+     2) Custom Range
+     Select option [1]: 1
+ [Config] Date Range: Current Month (2026-02-01 to 2026-02-15)
+
+ [*] Connecting to container 'orangehrm_mariadb'...
+
+ --- Report for: ilia ---
+ Date         | In       | Out      | Hours
+ -------------+----------+----------+-------
+ 2026-02-01   | 09:00    | 17:00    | 8.00
+ -------------+----------+----------+-------
+ TOTAL HOURS: 8.00
+
+ [?] Export data for ilia?
+     1) No (Default)
+     2) JSON
+     3) CSV
+     Select option: 2
+ [✔] Exported to ./clockwork_ilia_1771153200.json
+
+ --- Report for: admin ---
+ ...
 
 ## 📄 License
 
 This project is dedicated to the public domain under the CC0 1.0 Universal license. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.
+```
