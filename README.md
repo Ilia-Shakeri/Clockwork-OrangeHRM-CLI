@@ -114,9 +114,8 @@ Run the script and follow the on-screen prompts:
  [✔] Exported to ./clockwork_ilia_1771153200.json
 
  --- Report for: admin ---
- ...
+ ```
 
 ## 📄 License
 
 This project is dedicated to the public domain under the CC0 1.0 Universal license. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.
-```
