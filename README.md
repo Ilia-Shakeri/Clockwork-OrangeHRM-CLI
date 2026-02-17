@@ -1,4 +1,4 @@
-<div align="center">
+<div align="center">  
 
 <img width="40%" alt='OrangeHRM' src='https://raw.githubusercontent.com/wiki/orangehrm/orangehrm/logos/logo.svg#gh-light-mode-only'/><img width="40%" alt='OrangeHRM' src='https://raw.githubusercontent.com/wiki/orangehrm/orangehrm/logos/logo_dark_mode.svg#gh-dark-mode-only'/>
 
@@ -31,6 +31,10 @@ It bypasses UI limitations by directly querying the database backend, giving Dev
 ## 🚀 Features
 
 - **Multi-User Support:** Query single or multiple users (comma-separated) in one batch.
+- **Bulk Scan Mode (users.txt):** Scan many users from a `users.txt` file (supports line-by-line or comma-separated usernames).
+- **Combined PDF Report:** Export **one PDF** for all users (each user starts on a new page) with an OrangeHRM-themed layout.
+- **Dual Date Support:** Shows both **Gregorian** and **Persian (Jalali)** dates in the report (when `python3` is available).
+- **On-Demand PDF Dependency:** PDF export checks for `wkhtmltopdf` only when needed and can install it with user consent.
 - **Data Export:** Save reports instantly as **JSON** or **CSV** files.
 - **Auto-Logging:** Automatically saves session logs to the `./logs` directory.
 - **Interactive Session:** Run multiple queries without restarting the script.
@@ -42,35 +46,54 @@ It bypasses UI limitations by directly querying the database backend, giving Dev
 - A **Self-Hosted** OrangeHRM instance.
 - **MariaDB** as the database backend (MySQL is likely compatible but untested).
 - Docker installed on the host machine.
+- (Optional) `python3` for Jalali date conversion.
+- (Optional) `wkhtmltopdf` for PDF export (can be installed on-demand by the script).
 
 ## 📥 Installation
 
 1. **Clone the repository:**
 
-   ```bash
+  ```bash
    git clone https://github.com/Ilia-Shakeri/Clockwork-OrangeHRM-CLI.git
    cd clockwork-orangehrm-cli
-   ```
+```
 
 2. **Make the script executable:**
 
-   ```bash
-   chmod +x clockwork.sh
-   ```
+```bash
+ chmod +x clockwork.sh
+```
 
 3. (Optional) Configure Environment:
 
-   ```bash
-   cp .env.example .env
-   nano .env
-   ```
+```bash
+ cp .env.example .env
+ nano .env
+ ```
 
 ## 💻 Usage
 
 Run the script and follow the on-screen prompts:
-`bash
-    ./clockwork.sh
-    `
+
+```bash
+./clockwork.sh
+```
+
+### Bulk Scan (users.txt)
+
+* Place a `users.txt` file next to `clockwork.sh`, **or** provide the path when prompted.
+* Supported formats:
+
+  * One username per line
+  * Comma-separated usernames (can be on one or multiple lines)
+
+Example `users.txt`:
+
+```text
+ilia
+admin,hr.manager
+john.doe
+```
 
 ## 🖼️ Example Output
 
@@ -81,7 +104,6 @@ Run the script and follow the on-screen prompts:
 ██║     ██║     ██║   ██║██║     ██╔═██╗ ██║███╗██║██║   ██║██╔══██╗██╔═██╗
 ╚██████╗███████╗╚██████╔╝╚██████╗██║  ██╗╚███╔███╔╝╚██████╔╝██║  ██║██║  ██╗
  ╚═════╝╚══════╝ ╚═════╝  ╚═════╝╚═╝  ╚═╝ ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
-             ORANGEHRM CLI EDITION  v2.0.0
 
  :: Session Started at Sat Feb 15 11:00:00 UTC 2026 ::
 
@@ -114,7 +136,7 @@ Run the script and follow the on-screen prompts:
  [✔] Exported to ./clockwork_ilia_1771153200.json
 
  --- Report for: admin ---
- ```
+```
 
 ## 📄 License
 
